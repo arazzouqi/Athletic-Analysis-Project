@@ -1,0 +1,38 @@
+.fifa-table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.highlight-row {
+    color: #fff;
+    background-color: #e06000;
+}
+
+.fifa-table th {
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+}
+
+.fifa-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.fifa-table td {
+    padding: 8px;
+}
+
+.fifa-table th:first-child, .fifa-table td:first-child {
+    background-color: #fcd116;
+    font-weight: bold;
+}
+
+.fifa-table tr.selected {
+    background-color: #fcd116;
+    color: black;
+    font-weight: bold;
+}

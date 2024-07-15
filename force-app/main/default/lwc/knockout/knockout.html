@@ -1,0 +1,30 @@
+<template>
+    <div class="knockout-stage-wrapper">
+        <div class="knockout-stage">
+            <template for:each={allRounds} for:item="round" for:index="index">
+                <div key={round.id}  class={round.classe}>
+                <div key={round.id} class={round.class}>
+                    <div class="round">
+                        <h3 class="round-title">{round.name}</h3>
+                        <div class={round.class}>
+                            <template for:each={round.matches} for:item="match">
+                                <div key={match.id} class="match-card">
+                                    <div class="team">
+                                         <img class="logo" src={match.imageUrl1} alt="Team 1 Logo"/>  
+                                        {match.team1} - {match.score1} <template if:true={match.hadPenalty}> P({match.penalty1})</template>
+                                    </div>
+                                    <div class="versus">vs</div>
+                                    <div class="team">
+                                         <img class="logo" src={match.imageUrl2} alt="Team 2 Logo"/>    
+                                        {match.team2} - {match.score2} <template if:true={match.hadPenalty}> P({match.penalty2})</template>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,74 @@
+.knockout-stage-wrapper {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.knockout-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.round-container {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.bracket {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.round-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.matches {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.team-name {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.team-score {
+    margin-right: 5px;
+}
+
+.penalty {
+    color: #999;
+}
+
+.versus {
+    font-weight: bold;
+    font-size: 1.2rem;
+}

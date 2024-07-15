@@ -1,0 +1,36 @@
+<template>
+    <div class="tournament-results">
+        <template if:true={matches}>
+            <template for:each={matches} for:item="match">
+                <div key={match.Id} class="match-card">
+                    <div class="match-info">
+                        <div class="team">
+                            <span class="team-name">{match.Team1__r.Name}</span>
+                            <span class="team-score">{match.Team1_Goals__c}</span>
+                        </div>
+                        <div class="versus">vs</div>
+                        <div class="team">
+                            <span class="team-name">{match.Team2__r.Name}</span>
+                            <span class="team-score">{match.Team2_Goals__c}</span>
+                        </div>
+                    </div>
+                    <template if:true={match.isPenalty}>
+                        <div class="penalty-info">
+                            <span class="penalty-score">Penalties: {match.Penalty_Home__c} - {match.Penalty_Away__c}</span>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </template>
+        <template if:true={error}>
+            <p>Error fetching matches: {error}</p>
+        </template>
+         <template if:false={matches}>
+                    <p>No matches found for this team.</p>
+         </template>
+    </div>
+</template>
+
+
+        
+       

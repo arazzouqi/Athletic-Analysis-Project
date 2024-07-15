@@ -1,0 +1,49 @@
+.tournament-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.match-card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.team-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.team-score {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.versus {
+    font-size: 1em;
+    margin: 0 1rem;
+}
+
+.penalty-info {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: #888;
+}

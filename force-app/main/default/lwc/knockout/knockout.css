@@ -1,0 +1,129 @@
+.knockout-stage-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.knockout-stage {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Space between rounds */
+    align-items: center; /* Vertically center the rounds */
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Full width for each round */
+}
+
+.round-title {
+    font-size: 1.2em;
+    margin-bottom: 1rem; /* Consistent spacing */
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    font-weight: 700;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.bracket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Increase spacing for better visualization */
+    position: relative;
+}
+
+.match-card {
+    position: relative;
+    padding: 1rem; /* Consistent padding */
+    background: linear-gradient(145deg, #e6e6fa, #f5f5f5); /* Lavender Gradient */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width for each match */
+    max-width: 300px; /* Maximum width */
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team {
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 0.5rem; /* Consistent spacing */
+    display: flex;
+    align-items: center;
+}
+
+.versus {
+    font-size: 1em;
+    margin: 0.5rem 0; /* Space above and below 'vs' */
+}
+
+.logo {
+    max-width: 20%;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Custom heights for rounds to position them correctly */
+.final {
+    padding-top: 10vh; /* Vertically center the final round */
+}
+
+.semifinals {
+    padding-top: 7vh; /* Vertically center the semifinals */
+}
+
+.quarterfinals {
+    padding-top: 3vh; /* Vertically center the quarterfinals */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .knockout-stage-wrapper {
+        padding: 10px;
+    }
+
+    .knockout-stage {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .round {
+        margin-right: 0;
+        margin-bottom: 2rem; /* Space between rounds vertically */
+    }
+
+    .match-card {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .logo {
+        max-width: 15%;
+    }
+}
+
+@media (max-width: 480px) {
+    .round-title {
+        font-size: 1em;
+    }
+
+    .match-card {
+        padding: 0.5rem; /* Smaller padding on smaller screens */
+    }
+
+    .logo {
+        max-width: 10%;
+    }
+}
